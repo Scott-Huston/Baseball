@@ -1,6 +1,7 @@
 Discipline:
 What is the value of seeing more pitches per plate appearance and therefore getting weaker pitching later?
 Conversely, what is the value of pitchers being more efficient and saving bullpens
+pitching, pitches /pa
 
 Do pitchers pitch more aggressively with big leads?
 
@@ -9,3 +10,5 @@ Do pitchers who work faster benefit from better defense?
 SB% by pitch type
 
 Clutch pitchers by pitch f/x, faster fb, more break, better locations?
+
+Houston batting stats this year
