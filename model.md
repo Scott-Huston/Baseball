@@ -6,10 +6,13 @@ might want to batch train by season
 create script that gets season-by-season data, cleans it, then saves to csv
 Then train model with each batch
 
-Historical betting lines at Vegas Insider?
-
 ## Pitch model: 
-Get expected value for each pitch (hp_umpire?, velo, spin, sequencing?, handedness, situation?, fielding?, swing%, contact%, xwRC+, count, likelihood of strike call)
+
+Get xwoba by count
+
+Add PA result column
+
+Get expected value for each pitch (hp_umpire?, velo, spin, sequencing?, handedness, situation?, fielding?, swing%, contact%, xwRC+, count, likelihood of strike call, park)
 Need xwRC+ by count (I think I can create this without too much trouble)
 might need to create custom relative metrics for each pitcher (88mph changeup is different for a guy who throws a 90mph fastball vs. 98mph)
  - Maybe just difference from fastball? Difference from avg. pitch?
@@ -25,6 +28,9 @@ might need to create custom relative metrics for each pitcher (88mph changeup is
 _Defense_
 - ignore at this level because the outcome I'm predicting is xwRC+ based on exit velo / launch angle, def already stripped out
 
+Future improvements:
+ - Game by game weather?
+
 
 ## Player model:
 Use Bayesian something (what are the priors?) to get pitcher and hitter quality based on results above/below expectation
@@ -37,7 +43,14 @@ Catcher framing?
 Use player ratings to come up with team expectations
 How to incorporate fielding into team projections? (probably at player level)
 Add in bullpen rest situation (could also incorporate this at player level with talent decreasing if they've been used a lot recently)
+How do I use knowledge about projected starter? How do I backtest that while accounting for openers?
+  - odds data has projected starters that looks good
+  - do name lookup
+
+How to incorporate player stats from current season?
 
 _Nice to haves_
 - Interaction effects w/ eg. gb pitchers and good IF defense
 - Interaction effects w/ battery and baserunners 
+
+Historical odds here: https://www.sportsbookreviewsonline.com/scoresoddsarchives/mlb/mlboddsarchives.htm
