@@ -8,11 +8,20 @@ Then train model with each batch
 
 ## Pitch model: 
 
+Add PA result column -- done
+
 Get xwoba by count
 
-Add PA result column
+how to account for league differences / DH rules
+ - Universal DH in 2020, unsure about 2021
+
 
 Get expected value for each pitch (hp_umpire?, velo, spin, sequencing?, handedness, situation?, fielding?, swing%, contact%, xwRC+, count, likelihood of strike call, park)
+
+variables from retrosheet(day_night, ump_home_id)
+
+(adjusting for park here means taking into account things like hitters eye but not dimensions/weather because I'm predicting xwOBA, and that is not park adjusted)
+
 Need xwRC+ by count (I think I can create this without too much trouble)
 might need to create custom relative metrics for each pitcher (88mph changeup is different for a guy who throws a 90mph fastball vs. 98mph)
  - Maybe just difference from fastball? Difference from avg. pitch?
